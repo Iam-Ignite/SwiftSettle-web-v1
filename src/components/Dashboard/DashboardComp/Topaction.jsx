@@ -13,7 +13,7 @@ export default function Topaction() {
 
            <div className="cursor-pointer bg-[#A23EFF] flex gap-3 justify-center items-center text-[#FFF] md:rounded-lg 2xl:rounded-2xl px-4 md:py-4 2xl:py-2">
              <i><img src="/image/withdraw.svg" alt="" /></i>
-             <div className="text-[#FFF]">Withdraw</div>
+             <div className="text-[#FFF] text-sm">Withdraw</div>
            </div>
         </div>
     </div>
