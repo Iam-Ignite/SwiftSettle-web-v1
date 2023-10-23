@@ -45,7 +45,7 @@ const Home = () => {
       {/* SECTIONS */}
       {activePage === 'about' ? <AboutUs /> : null}
       {activePage === 'faq' ? <Faq /> : null}
-      {activePage !== 'faq' ? <section className='whyus px-[60px] sm:px-[20px] py-[60px]'>
+      {activePage !== 'faq' ? <section className='whyus px-[60px] sm:px-[20px] py-[60px] bg-[#fff]'>
         <h2 className='font-ui-semi text-[28px] text-center mb-[60px] text-[#0D0033]'>Why choose us?</h2>
         <div className='flex flex-row gap-[15px] justify-center items-start lg:grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
           <WhyUsCard icon={bolts} title={"Speed"} body={"Say goodbye to waiting. With us, your money transfers are lightning-fast, ensuring your funds reach their destination in no time."} />
@@ -55,7 +55,7 @@ const Home = () => {
       </section> : null}
 
 
-      {activePage !== 'faq' && <section>
+      {activePage !== 'faq' && <section className='bg-[#FFF]'>
 
         <section className='px-[60px] sm:px-[20px] relative'>
           {/* wrapper div */}

@@ -18,7 +18,7 @@ const App = () => {
   return (
     <ContextProvider >
      <div className="bg-[#1E1E1E] relative bg-center bg-cover bg-no-repeat h-[100%]" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(/backgroundPonzi.svg)`}}>
-        <div className={`absolute w-0 xl:w-[500px] h-[500px] top-[0] left-[32%] z-[99] ${location.pathname  !== "/" && "hidden" }`} style={{
+        <div className={`absolute w-0 xl:w-[500px] h-[500px] top-[0] left-[32%] z-[99] ${location.pathname  == "/" && "hidden" }`} style={{
           borderRadius: '500px',
           background: 'rgba(51, 68, 98, 0.73)',
           filter: "blur(150px)"
