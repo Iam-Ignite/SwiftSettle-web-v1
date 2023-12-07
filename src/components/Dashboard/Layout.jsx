@@ -1,7 +1,7 @@
-import React from 'react';
 import Dashnavidate from './Dashnavidate';
 import Top from './Top';
 
+// eslint-disable-next-line react/prop-types
 export default function Layout({children}) {
   return (
     <div className=''>
@@ -12,14 +12,14 @@ export default function Layout({children}) {
     }
     */}
 
-      <div className="w-[100%] h-screen bg-[#F7F7F7] relative z-[9999] grid grid-cols-4 text-[#FFF]">
+      <div className="w-[100%] h-screen md:h-auto  bg-[#F7F7F7] relative z-[9999] grid grid-cols-4 text-[#FFF]">
         {/* Left */}
-        <div className="md:fixed md:bottom-0 md:w-full z-[99999] 2xl:col-span-1 row-span-full ">
+        <div className="md:fixed md:bottom-0 md:w-full z-40 2xl:col-span-1 row-span-full ">
             <Dashnavidate  />
         </div>
 
         {/* Right */}
-        <div className="md:col-span-full col-span-3">
+        <div className="md:col-span-full overflow-x-hidden pb-6 col-span-3">
           <Top />
           {children}
         </div>

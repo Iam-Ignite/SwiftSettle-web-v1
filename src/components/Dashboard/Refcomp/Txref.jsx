@@ -48,11 +48,12 @@ export default function Txref() {
    ]
 
   return (
-    <div className='flex justify-evenly items-center'>
+    <div className='flex justify-between px-2 items-center'>
         {/* tx icon and type */}
        <div className="flex items-center gap-2">
         {/* Icon */}
           <Txicon />
+
         {/* Type */}
         <div className="text-[#555] leading-[20px]">
             <Txtype />

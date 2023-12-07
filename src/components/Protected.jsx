@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from 'react';
 import Layout from '../components/Dashboard/Layout';
 
 export default function Protected({ component: Component }) {
   const [isVerified, setIsVerified] = useState(true);
 
   useEffect(() => {
-    const token = document.cookie
-      .split('; ')
-      .find(row => row.startsWith('jwt=')) // Assuming the cookie name is 'jwt'
-      ?.split('=')[1];
+    const token = localStorage.getItem('isLoggedIn');
 
     const verifyToken = () => {
       // You can use your preferred JWT library to verify the token
@@ -16,7 +14,7 @@ export default function Protected({ component: Component }) {
       if (token) {
         return true; // Token verification success
       }
-      return true; // Token verification failed
+      return false; // Token verification failed
     };
 
     setIsVerified(verifyToken());
